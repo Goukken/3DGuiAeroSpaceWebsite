@@ -4,6 +4,7 @@ import { OrbitControls } from '../../node_modules/three/examples/jsm/controls/Or
 import * as dat from 'dat.gui';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
+document.addEventListener('DOMContentLoaded', () => {
 /* Loader */
 const assetLoader = new GLTFLoader();
 
@@ -33,9 +34,9 @@ camera.position.set(10, 10, 10);
 
 /* Render - DOM include */
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setSize(window.innerWidth*0.55,window.innerHeight*0.65);
 document.querySelector('.model3d').appendChild(renderer.domElement);
+
 
 /* Helpers */
 const orbit = new OrbitControls(camera, renderer.domElement);
@@ -109,5 +110,5 @@ function animate() {
     }
     renderer.render(scene, camera);
 }
-
 renderer.setAnimationLoop(animate);
+});
