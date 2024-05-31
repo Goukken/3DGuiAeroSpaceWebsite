@@ -3,8 +3,9 @@ const path = require('path');
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 1280,
-    height: 720,
+    width: 1366,
+    height: 768,
+    resizable: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
@@ -12,7 +13,8 @@ function createWindow() {
     },
   });
 
-  mainWindow.loadFile('./src/GUI.html');
+  
+  mainWindow.loadURL(`http://localhost:3000/home`);
 }
 
 app.on('ready', createWindow);

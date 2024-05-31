@@ -1,21 +1,21 @@
 {
   "name": "video",
   "version": "1.0.0",
-  "description": "",
   "main": "main.js",
+  "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "parcel": "parcel ./src/GUI.html",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "parcel build src/GUI.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "dat.gui": "^0.7.9",
     "electron": "^30.0.9",
+    "express": "^4.19.2",
     "three": "^0.164.1"
-  },
-  "devDependencies": {
-    "dat.gui": "^0.7.9"
   }
 }
