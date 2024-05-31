@@ -606,7 +606,8 @@ const camera = new _three.PerspectiveCamera(75, window.innerWidth / window.inner
 camera.position.set(10, 10, 10);
 /* Render - DOM include */ const renderer = new _three.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+renderer.setSize(window.innerWidth * 0.55, window.innerHeight * 0.65);
+document.querySelector(".model3d").appendChild(renderer.domElement);
 /* Helpers */ const orbit = new (0, _orbitControls.OrbitControls)(camera, renderer.domElement);
 orbit.update();
 const axesHelper = new _three.AxesHelper(10);

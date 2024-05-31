@@ -34,7 +34,8 @@ camera.position.set(10, 10, 10);
 /* Render - DOM include */
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+renderer.setSize(window.innerWidth*0.55,window.innerHeight*0.65);
+document.querySelector('.model3d').appendChild(renderer.domElement);
 
 /* Helpers */
 const orbit = new OrbitControls(camera, renderer.domElement);
