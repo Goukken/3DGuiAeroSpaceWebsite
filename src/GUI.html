@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Interface Teste</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- Logo barra de menu -->
+        <div class="container-logo">
+            <h1>Cansat Telemetry</h1>
+            <img src="./assets/img/espiao.png" alt="" class="icon-1">
+        </div>
+        <!-- Area troca de gráficos -->
+        <div class="container-menu">
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><button class="button-28" role="button">Gráfico Altitude</button></li>
+                    <li><button class="button-28" role="button">Gráfico Umidade</button></li>
+                    <li><button class="button-28" role="button">Gráfico Temperatura</button></li>
+                    <li><button class="button-28" role="button">Gráfico Velocidade</button></li>
+                    <li><button class="button-28" role="button">Gráfico Misto</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row viewheight65">
+                <!-- Area de exibição de gráficos -->
+                <div class="graph-stats col">
+                    Área de Gráficos
+                </div>
+                <!-- Area do modelo 3D -->
+                <div class="model3d col">
+                    Modelo 3D
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- Area de exibição Altura -->
+        <div class="stats-row">
+            <div class="project-status-altitude">
+                <p>Eixo X :</p>
+                <div class="stats-area">
+                    <p>00000.000</p>
+                </div>
+            </div>
+            <div class="project-status-altitude">
+                <p>Eixo Y :</p>
+                <div class="stats-area">
+                    <p>00000.000</p>
+                </div>
+            </div>
+            <div class="project-status-altitude">
+                <p>Eixo Z:</p>
+                <div class="stats-area">
+                    <p>00000.000</p>
+                </div>
+            </div>
+        </div>
+        <div class="stats-row">
+            <div class="project-status-altitude">
+                <p>Altura (metros):</p>
+                <div class="stats-area">
+                    <p>00000.000</p>
+                </div>
+            </div>
+            <div class="project-status-altitude">
+                <p>Temperatura (Celsius):</p>
+                <div class="stats-area">
+                    <p>00000.000</p>
+                </div>
+            </div>
+            <div class="project-status-altitude">
+                <p>Umidade (g/m³):</p>
+                <div class="stats-area">
+                    <p>00000.000</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
