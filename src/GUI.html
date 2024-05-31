@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!-- TODO Usar o bootstrap -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Interface Teste</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
 </head>
 
 <body>
@@ -29,14 +30,22 @@
         </div>
     </header>
     <main>
-        <!-- Area de exibição de gráficos -->
-        <div class="graficos"></div>
-        <!-- Area do modelo 3D -->
-        <div></div>
+        <div class="container-fluid">
+            <div class="row viewheight65">
+                <!-- Area de exibição de gráficos -->
+                <div class="graph-stats col">
+                    Área de Gráficos
+                </div>
+                <!-- Area do modelo 3D -->
+                <div class="model3d col">
+                    Modelo 3D
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <!-- Area de exibição Altura -->
-        <div class="row">
+        <div class="stats-row">
             <div class="project-status-altitude">
                 <p>Eixo X :</p>
                 <div class="stats-area">
@@ -56,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="stats-row">
             <div class="project-status-altitude">
                 <p>Altura (metros):</p>
                 <div class="stats-area">

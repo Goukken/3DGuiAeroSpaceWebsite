@@ -41,6 +41,9 @@ header {
 main {
     height: 65vh;
 }
+.viewheight65 {
+    height: 65vh;
+}
 footer{
     padding: 10px 0px;
     background-color: var(--color-3);
@@ -48,7 +51,7 @@ footer{
     flex-direction: column;
     gap: 10px;
 }
-.row {
+.stats-row {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -82,9 +85,21 @@ h1 {
     font-weight: 200;
 }
 
-.graficos {
+.graph-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     color: black;
+  
+}
+.model3d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+  
 }
 
 .button-28 {
