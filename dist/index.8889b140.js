@@ -592,8 +592,8 @@ var _gltfloaderJs = require("three/examples/jsm/loaders/GLTFLoader.js");
 /* 3D Object */ let model;
 const sateliteUrl = new URL(require("87983906fce77274"));
 const satelitePosition = {
-    X: 10,
-    Y: 5,
+    X: 0,
+    Y: 1,
     Z: 0
 };
 const sateliteRotation = {
@@ -603,7 +603,7 @@ const sateliteRotation = {
 };
 /* Scene and Camera */ const scene = new _three.Scene();
 const camera = new _three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(10, 15, 10);
+camera.position.set(10, 10, 10);
 /* Render - DOM include */ const renderer = new _three.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -651,28 +651,10 @@ scene.add(ambientLight);
     console.log(error);
 });
 /* Grid Helpers */ const size = 100;
-const divisions = 100;
+const divisions = 30;
 // Ground
 const gridHelperGround = new _three.GridHelper(size, divisions);
 scene.add(gridHelperGround);
-// Wall XZ (Front and Back)
-const gridHelperWallXZFront = new _three.GridHelper(size, divisions);
-gridHelperWallXZFront.position.set(0, size / 2, size / 2);
-gridHelperWallXZFront.rotation.x = Math.PI / 2;
-scene.add(gridHelperWallXZFront);
-const gridHelperWallXZBack = new _three.GridHelper(size, divisions);
-gridHelperWallXZBack.position.set(0, size / 2, -size / 2);
-gridHelperWallXZBack.rotation.x = Math.PI / 2;
-scene.add(gridHelperWallXZBack);
-// Wall YZ (Left and Right)
-const gridHelperWallYZLeft = new _three.GridHelper(size, divisions);
-gridHelperWallYZLeft.position.set(-size / 2, size / 2, 0);
-gridHelperWallYZLeft.rotation.z = Math.PI / 2;
-scene.add(gridHelperWallYZLeft);
-const gridHelperWallYZRight = new _three.GridHelper(size, divisions);
-gridHelperWallYZRight.position.set(size / 2, size / 2, 0);
-gridHelperWallYZRight.rotation.z = Math.PI / 2;
-scene.add(gridHelperWallYZRight);
 function animate() {
     if (model) {
         model.rotation.x = sateliteRotation.X;

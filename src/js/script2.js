@@ -11,8 +11,8 @@ const assetLoader = new GLTFLoader();
 let model;
 const sateliteUrl = new URL('../assets/satelite.glb', import.meta.url);
 const satelitePosition = {
-    X : 10,
-    Y : 5,
+    X : 0,
+    Y : 1,
     Z : 0
 }
 const sateliteRotation = {
@@ -29,7 +29,7 @@ const camera = new THREE.PerspectiveCamera(
     0.1,
     1000
 );
-camera.position.set(10, 15, 10);
+camera.position.set(10, 10, 10);
 
 /* Render - DOM include */
 const renderer = new THREE.WebGLRenderer();
@@ -93,33 +93,12 @@ assetLoader.load(sateliteUrl.href, function(gltf) {
 
 /* Grid Helpers */
 const size = 100;
-const divisions = 100;
+const divisions = 30;
 
 // Ground
 const gridHelperGround = new THREE.GridHelper(size, divisions);
 scene.add(gridHelperGround);
 
-// Wall XZ (Front and Back)
-const gridHelperWallXZFront = new THREE.GridHelper(size, divisions);
-gridHelperWallXZFront.position.set(0, size / 2, size / 2);
-gridHelperWallXZFront.rotation.x = Math.PI / 2;
-scene.add(gridHelperWallXZFront);
-
-const gridHelperWallXZBack = new THREE.GridHelper(size, divisions);
-gridHelperWallXZBack.position.set(0, size / 2, -size / 2);
-gridHelperWallXZBack.rotation.x = Math.PI / 2;
-scene.add(gridHelperWallXZBack);
-
-// Wall YZ (Left and Right)
-const gridHelperWallYZLeft = new THREE.GridHelper(size, divisions);
-gridHelperWallYZLeft.position.set(-size / 2, size / 2, 0);
-gridHelperWallYZLeft.rotation.z = Math.PI / 2;
-scene.add(gridHelperWallYZLeft);
-
-const gridHelperWallYZRight = new THREE.GridHelper(size, divisions);
-gridHelperWallYZRight.position.set(size / 2, size / 2, 0);
-gridHelperWallYZRight.rotation.z = Math.PI / 2;
-scene.add(gridHelperWallYZRight);
 
 function animate() {
     if (model) {
