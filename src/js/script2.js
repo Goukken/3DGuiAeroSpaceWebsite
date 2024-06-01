@@ -38,13 +38,15 @@ renderer.setSize(window.innerWidth*0.55,window.innerHeight*0.65);
 document.querySelector('.model3d').appendChild(renderer.domElement);
 
 
+
 /* Helpers */
 const orbit = new OrbitControls(camera, renderer.domElement);
 orbit.update();
 const axesHelper = new THREE.AxesHelper(10);
 
 /* GUI */
-const gui = new dat.GUI();
+const gui = new dat.GUI({autoPlace:false});
+
 const options = {
     positionX: satelitePosition.X,
     positionY: satelitePosition.Y,
@@ -100,7 +102,6 @@ const divisions = 30;
 // Ground
 const gridHelperGround = new THREE.GridHelper(size, divisions);
 scene.add(gridHelperGround);
-
 
 function animate() {
     if (model) {

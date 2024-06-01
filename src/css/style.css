@@ -154,6 +154,7 @@ h1 {
 .project-status-altitude p {
     font-family: monospace;
 }
+
 .stats-area {
     display: flex;
     align-items: center;
